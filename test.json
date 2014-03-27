@@ -98,7 +98,7 @@
         "RuleAction": "allow",
         "Egress": "false",
         "CidrBlock": "0.0.0.0/0",
-        "PortRange": {"From": "0", "To": "65535"}
+        "PortRange": {"From": "-1", "To": "-1"}
       }
     },
     "OutboundICMPPublicNetworkAclEntry": {
@@ -110,7 +110,7 @@
         "RuleAction": "allow",
         "Egress": "true",
         "CidrBlock": "0.0.0.0/0",
-        "PortRange": {"From": "0", "To": "65535"}
+        "PortRange": {"From": "-1", "To": "-1"}
       }
     },
 
@@ -233,7 +233,7 @@
         "RuleAction": "allow",
         "Egress": "false",
         "CidrBlock": "0.0.0.0/0",
-        "PortRange": {"From": "0", "To": "65535"}
+        "PortRange": {"From": "-1", "To": "-1"}
       }
     },
     "OutboundICMPPrivateNetworkAclEntry": {
@@ -245,7 +245,7 @@
         "RuleAction": "allow",
         "Egress": "true",
         "CidrBlock": "0.0.0.0/0",
-        "PortRange": {"From": "0", "To": "65535"}
+        "PortRange": {"From": "-1", "To": "-1"}
       }
     },
 
