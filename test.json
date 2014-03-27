@@ -201,7 +201,7 @@
       "Properties": {
         "RouteTableId": { "Ref": "PrivateRouteTable" },
         "DestinationCidrBlock": "0.0.0.0/0",
-        "InstanceId": { "Ref": "TestInstance" }
+        "InstanceId": { "Ref": "NatInstance" }
       }
     },
 
@@ -364,7 +364,7 @@
        }
     },     
 
-    "TestInstance": {
+    "NatInstance": {
         "Type": "AWS::EC2::Instance",
         "Properties": {
            "ImageId": "ami-6f969506",
@@ -389,6 +389,7 @@
         "Properties": {
            "ImageId": "ami-6f969506",
            "InstanceType": "m1.small", 
+           "IamInstanceProfile": "TestStack-ProvisioningDeployment",
            "KeyName": "Sous",
            "SubnetId": { "Ref": "PrivateSubnet" },
            "UserData": "IyEvYmluL2Jhc2gKZWNobyAiVGhpcyB3YXMgd3JpdHRlbiBmcm9tIFVzZXJEYXRhIG9uIGBkYXRlYCIgPiAvdG1wL3VzZXJkYXRhLm91dHB1dAo=",
@@ -397,10 +398,10 @@
         "DependsOn": "AttachGateway"
     },
 
-    "TestInstanceEIP": {
+    "NatInstanceEIP": {
         "Type": "AWS::EC2::EIP",
         "Properties": {
-            "InstanceId": { "Ref": "TestInstance" }, 
+            "InstanceId": { "Ref": "NatInstance" }, 
             "Domain": "vpc"
         },
         "DependsOn": "AttachGateway"
