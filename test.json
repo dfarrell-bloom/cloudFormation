@@ -367,7 +367,7 @@
     "NatInstance": {
         "Type": "AWS::EC2::Instance",
         "Properties": {
-           "ImageId": "ami-6f969506",
+           "ImageId": "ami-58a3cf68",
            "InstanceType": "m1.small", 
            "KeyName": "Sous",
            "SourceDestCheck": "false",
@@ -387,8 +387,8 @@
     "PrivateInstance": {
         "Type": "AWS::EC2::Instance",
         "Properties": {
-           "ImageId": "ami-6f969506",
-           "InstanceType": "c3.large", 
+           "ImageId": "ami-58a3cf68",
+           "InstanceType": "m3.large", 
            "IamInstanceProfile": "TestStack-ProvisioningDeployment",
            "KeyName": "Sous",
            "SubnetId": { "Ref": "PrivateSubnet" },
