@@ -388,7 +388,7 @@
         "Type": "AWS::EC2::Instance",
         "Properties": {
            "ImageId": "ami-6f969506",
-           "InstanceType": "m1.small", 
+           "InstanceType": "c3.large", 
            "IamInstanceProfile": "TestStack-ProvisioningDeployment",
            "KeyName": "Sous",
            "SubnetId": { "Ref": "PrivateSubnet" },
