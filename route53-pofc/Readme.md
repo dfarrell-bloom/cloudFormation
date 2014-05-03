@@ -15,8 +15,9 @@ CloudFormation can update Route53 to automatically manage DNS.
     CloudFormation will say <q>The associatePublicIPAddress parameter cannot be specified when launching with multiple network interfaces</q>
     </li>
     <li>
-    <em>Assigning an EIP to an interface with a public IP removes the non-EIP, apparently irrevocably. <br />
-    I haven't found a way yet to retain the non-EIP public, or to add another one.  For now, I suggest using different 
+    <em>Assigning an EIP to an interface with a public IP removes the non-EIP, apparently irrevocably. </em>
+    <br />
+    I have not found a way yet to retain the non-EIP public, or to add another one.  For now, I suggest using different 
     ENIs for EIPs and for non-EIP publics  
     </li>
 </ul>
